@@ -23,8 +23,7 @@ namespace Course.Infrastructure.Repositories
 
         public bool Add(TEntity entity)
         {
-            var entityExist= _dbSet.Find(entity);
-            if (entityExist == null)
+            if (!_dbSet.Any(e=>e==entity))
             {
                 _dbSet.Add(entity);
                 _context.SaveChanges();
@@ -59,8 +58,7 @@ namespace Course.Infrastructure.Repositories
 
         public bool Update(TEntity entity)
         {
-            var testEntity = _context.Students.Find(entity);
-            if (testEntity == null)
+            if (!_dbSet.Any(e => e == entity))
             {
                 return false;
             }
