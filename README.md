@@ -1,6 +1,7 @@
 # Summary  
 The Api basically takes REST requests, and process the requests to db.  
-It simulates basic course management api  
+It simulates basic course management api.  
+Project version is .NET 5.0
 # The architecture  
 ![Clean architecture](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/media/image5-7.png) 
 - The api's architecture is based on Clean architecture(Onion architecture)  
